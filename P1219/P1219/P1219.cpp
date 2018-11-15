@@ -21,6 +21,7 @@ void dfs(int cur)
                 chess[cur] = i;
                 vis[1][i + cur] = vis[0][i] = vis[2][cur - i + n] = 1;
                 dfs(cur + 1);
+                // 回溯
                 vis[1][i + cur] = vis[0][i] = vis[2][cur - i + n] = 0;
             }
         }
